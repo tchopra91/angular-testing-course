@@ -1,6 +1,6 @@
-import {fakeAsync, flush, flushMicrotasks, tick} from '@angular/core/testing';
-import {of} from 'rxjs';
-import {delay} from 'rxjs/operators';
+import { fakeAsync, flush, flushMicrotasks, tick } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 
 describe('Async Testing Examples', () => {
@@ -58,13 +58,13 @@ describe('Async Testing Examples', () => {
 
             return Promise.resolve();
         })
-        .then(() => {
+            .then(() => {
 
-            console.log('Promise second then() evaluated successfully');
+                console.log('Promise second then() evaluated successfully');
 
-            test = true;
+                test = true;
 
-        });
+            });
 
         flushMicrotasks();
 
@@ -82,13 +82,13 @@ describe('Async Testing Examples', () => {
         Promise.resolve()
             .then(() => {
 
-               counter+=10;
+                counter += 10;
 
-               setTimeout(() => {
+                setTimeout(() => {
 
-                   counter += 1;
+                    counter += 1;
 
-               }, 1000);
+                }, 1000);
 
             });
 
